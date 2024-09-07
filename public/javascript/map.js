@@ -12,7 +12,7 @@ if(navigator.geolocation){
     },{
         enableHighAccuracy:true,
         maximumAge: 0, /* this will disable caching */
-        timeout: 5000/* send user's location in every 3 sec */
+        timeout: 1000 /* send user's location in every 3 sec */
 
     })
 }
