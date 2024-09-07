@@ -17,7 +17,7 @@ if(navigator.geolocation){
     })
 }
 
-const map = L.map('mapp').setView([0,0],12);
+const map = L.map('map').setView([20.5937,78.9629],12);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: "sumit puri"}).addTo(map); 
  
 
@@ -27,7 +27,7 @@ socket.on('receive-location',(data)=>{
     const{id,latitude,longitude}=data;
      
     
-    map.setView([latitude,longitude],16);
+    map.setView([latitude,longitude],25);
     if(markers[id]){ /* at first this will give "undefine" , so conditon will go the else statement */
         markers[id].setLatLng([latitude,longitude]);
     }else{
